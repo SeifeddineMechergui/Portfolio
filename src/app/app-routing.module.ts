@@ -6,14 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AboutComponent } from './about/about.component';
 
-const routes: Routes = [
-  {path:"contact",component:ContactComponent},
-  {path:"about",component:AboutComponent},
-  {path:"skills",component:SkillsComponent},
-  {path:"home",component:HomeComponent},
-  {path:"work",component:WorkComponent},
-
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
