@@ -1,40 +1,50 @@
 
- <section class="contact section" id="contact">
+<section class="contact section" id="contact">
     <h2 class="section-title" data-aos="fade-down">Contact</h2>
-
+  
     <div class="contact_container bd_grid">
-      <form action="#" class="contact_form">
+      <form #contactForm="ngForm" (submit)="submitForm(contactForm)" class="contact_form">
         <input
           type="text"
           placeholder="Name"
           class="control_input"
           data-aos="fade-right"
           data-aos-delay="250"
+          name="name" 
+          ngModel       
+          required
         />
         <input
-          type="mail"
+          type="email" 
           placeholder="Email"
           class="control_input"
           data-aos="fade-right"
           data-aos-delay="300"
+          name="email" 
+          ngModel      
+          required
         />
         <textarea
-          name=""
+          name="message" 
           id=""
           cols="0"
           rows="10"
           class="control_input"
           data-aos="fade-right"
           data-aos-delay="400"
+          ngModel       
+          required
         ></textarea>
-
+  
         <input
-          type="button"
+          type="submit" 
           value="Send"
           class="control_button button"
           data-aos="fade-right"
           data-aos-delay="450"
+          [disabled]="!contactForm.valid" 
         />
       </form>
     </div>
   </section>
+  
