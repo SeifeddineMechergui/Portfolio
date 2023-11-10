@@ -28,8 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/aos/dist/aos.js",
-              "src/assets/js/main.js"
+              "node_modules/aos/dist/aos.js"
             ]
           },
           "configurations": {
